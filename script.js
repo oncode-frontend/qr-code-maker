@@ -11,3 +11,18 @@ btnElem.addEventListener('click', ()=>{
 
     imgElem.src = qrUrl
 })
+
+
+const activateInput = () => {
+    console.log("test");
+}
+
+inputElem.addEventListener('input', () => {
+    if (inputElem.value === "") {
+        inputElem.style.padding = "0 0 0 25%";
+        inputElem.style.letterSpacing = "5px"
+    } else {
+        inputElem.style.padding = "0 0 0 10%";
+        inputElem.style.letterSpacing = "0px"
+    }
+})
