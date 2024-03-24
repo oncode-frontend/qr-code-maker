@@ -6,10 +6,13 @@ const imgElem = $.querySelector('.qr-img')
 const request = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data="
 
 btnElem.addEventListener('click', ()=>{
-    let inputValue = inputElem.value.trim()
-    let qrUrl = request + inputValue
-
-    imgElem.src = qrUrl
+    if (inputElem.value === "") {
+        
+    } else{
+        let inputValue = inputElem.value.trim()
+        let qrUrl = request + inputValue
+        imgElem.src = qrUrl
+    }
 })
 
 
